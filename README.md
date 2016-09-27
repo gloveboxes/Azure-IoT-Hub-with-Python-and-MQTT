@@ -17,7 +17,35 @@ As at September 2016.
     * Raspbrry Pi Zero
     * Raspberry Pi 2
     * Raspberry Pi 3
-5. Should work on any platform support Python3 and the Paho-Mqtt library.
+5. Should work on any platform supporting Python3 and the Paho-Mqtt library.
+
+# Installation
+
+Easiest way is to git clone the solution.
+
+        git clone https://github.com/gloveboxes/Azure-IoT-Hub-with-Python-and-MQTT.git iothub
+
+then change to the iothub directory.
+
+    cd iothub
+
+On Windows run
+
+    install_libraries.bat to install the required pip3 libraries
+
+On Raspberry Pi run
+
+    ./setup.sh
+
+This will also setup the solution to autorun at startup
+
+This also 
+
+On Apple Mac
+
+    pip3 install pyowm
+    pip3 install paho-mqtt
+
 
 # Library Support
 
@@ -52,7 +80,6 @@ example sensor_envirophat.json
 ## Startup example
 
     python3 openweather.py sensor_envirophat.json
-
 
 
 # MQTT TLS Certificate

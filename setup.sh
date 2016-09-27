@@ -2,12 +2,10 @@
 
 echo Setting up Azure IoT Hub Python/MQTT Client Startup Services
 
-
-sudo pip3 install pyowm
-sudo pip3 install paho-mqtt
-
-
+chmod +x install_libraries.sh
 sudo chmod +x startiot.sh
+
+./install_libraries.sh
 
 
 sudo cp iot.service /etc/systemd/system
