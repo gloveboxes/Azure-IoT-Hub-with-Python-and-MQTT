@@ -22,7 +22,7 @@ As at September 2016.
 # Library Support
 
 1. Paho-MQTT
-    * pip3 install paho-MQTT
+    * pip3 install paho-mqtt
 2. Open Weather Map for Virtual Weather HAT
     * pip3 pyowm
 
@@ -30,9 +30,30 @@ As at September 2016.
 
 Sample code includes support for the following HATS
 
-1. [Raspberry Pi Sense HAT](https://www.raspberrypi.org/products/sense-hat/)
-2. [Enviro pHAT](https://shop.pimoroni.com/products/enviro-phat) for temperature, barometric, and light sensing
-3. [Open Weather Map](http://openweathermap.org/) Virtual HAT
+1. [Raspberry Pi Sense HAT](https://www.raspberrypi.org/products/sense-hat/): sensor_envirophat.py
+2. [Enviro pHAT](https://shop.pimoroni.com/products/enviro-phat): sensor_sensehat
+3. [Open Weather Map](http://openweathermap.org/) sensor_openweather.py
+
+# Startup Configuration
+
+Pass in a configuration .json file at run time.
+
+example sensor_envirophat.json
+
+    {
+    "IotHubAddress":"YourIoTHub.azure-devices.net",
+    "DeviceId":"pizero",
+    "SharedAccessKey":"uJ21qp9LUvjkohipkXycvb7RoYwmUDE+4gXyIYS00feZg=",
+    "SensorModule":"sensor_envirophat",
+    "OpenWeatherMapApiKey":"c2044448a2f55555925f27b9e21296dd",
+    "OpenWeatherMapLocationId":"Melbourne, AU"
+    }
+
+## Startup example
+
+    python3 openweather.py sensor_envirophat.json
+
+
 
 # MQTT TLS Certificate
 
@@ -44,7 +65,7 @@ On Windows using certlm.msc export one of the top level public certificate autho
 
     client.tls_set("baltimorebase64.cer") # Baltimore Cybertrust Root exported from Windows 10 using certlm.msc in base64 format
 
-The sample includes the Baltimore Cybertrust Key exported as baltimorebase64.cer.
+The sample includes the Baltimore Cybertrust Key exported as baltimorebase64.cer that can be used across platforms.
 
 # Recommended Software
 
