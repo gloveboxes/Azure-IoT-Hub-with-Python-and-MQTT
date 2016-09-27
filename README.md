@@ -134,6 +134,13 @@ OSX comes with Python 2.x by default, and setting the default Python version to 
 [Raspberry Pi Zero – Programming over USB](http://blog.gbaman.info/?p=791) ONLY works with Raspberry Pi Zero and provides a quick easy way to connect your PC to your Raspberry Pi Zero.
 
 
+# Setting up Python3 on Mac OS X
+
+This is mainly for my benefit as I have limited experience with an apple mac.
+
+1. Install [Python3](www.python3.org)
+2. Update [Tcl/Tk for Idle3](www.python.org/download/mac/tcltk). Install ActiveTcl 8.5.18.0.
+
 
 
 
