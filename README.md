@@ -1,4 +1,4 @@
-# Azure IoT Hub with Python and MQTT support from Windows, OSX, Linux including Ubuntu and Raspberry Pi Zero, 2 and 3
+# Azure IoT Hub with Python and MQTT support from Windows, Mac OS X Sierra, Linux including Ubuntu and Raspberry Pi Zero, 2 and 3
 
 This cross platform Python3 code sample demonstrates how to stream data to Azure IoT Hub from Windows, OSX, Linux including Ubuntu and Raspberry Pi Zero, 2 and 3
 
