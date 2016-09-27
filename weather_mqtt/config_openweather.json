@@ -1,0 +1,8 @@
+{
+  "IotHubAddress":"IoTCampAU.azure-devices.net",
+  "DeviceId":"mqtt",
+  "SharedAccessKey":"VZbmLwYjjdg04Gb5SvbNMTq44GdDEO5k5px6OUIu7l8=",
+  "SensorModule":"sensor_openweather",
+  "OpenWeatherMapApiKey":"c204bb28a2f9dc23925f27b9e21296dd",
+  "OpenWeatherMapLocationId":"Melbourne, AU"
+}

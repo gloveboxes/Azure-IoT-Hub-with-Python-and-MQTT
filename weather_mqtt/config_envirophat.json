@@ -1,0 +1,8 @@
+{
+  "IotHubAddress":"IoTCampAU.azure-devices.net",
+  "DeviceId":"pizero",
+  "SharedAccessKey":"uJ21qp9LUvlOSipkXusvlRoYwmUDE+4gXyIYS00feZg=",
+  "SensorModule":"sensor_envirophat",
+  "OpenWeatherMapApiKey":"c204bb28a2f9dc23925f27b9e21296dd",
+  "OpenWeatherMapLocationId":"Melbourne, AU"
+}

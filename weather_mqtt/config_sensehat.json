@@ -1,0 +1,8 @@
+{
+  "IotHubAddress":"IoTCampAU.azure-devices.net",
+  "DeviceId":"pisense",
+  "SharedAccessKey":"04a4dg5uOyPIRK67cM0BNzIQ7kMLngGnhCri7JRZeoo=",
+  "SensorModule":"sensor_sensehat",
+  "OpenWeatherMapApiKey":"c204bb28a2f9dc23925f27b9e21296dd",
+  "OpenWeatherMapLocationId":"Melbourne, AU"
+}
