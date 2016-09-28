@@ -79,7 +79,8 @@ example sensor_envirophat.json
 
 ## Startup example
 
-    python3 openweather.py sensor_envirophat.json
+    python3 weather_mqtt.py sensor_envirophat.json
+    python3 weather_mqtt.py sensor_openweather.json
 
 
 # MQTT TLS Certificate
