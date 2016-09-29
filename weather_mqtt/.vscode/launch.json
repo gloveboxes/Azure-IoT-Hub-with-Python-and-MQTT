@@ -15,6 +15,19 @@
             ]
         },
         {
+            "name": "Python3 on OSX",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "pythonPath": "/Library/Frameworks/Python.framework/Versions/3.5/bin/python3",
+            "program": "${file}",
+            "debugOptions": [
+                "WaitOnAbnormalExit",
+                "WaitOnNormalExit",
+                "RedirectOutput"
+            ]
+        },
+        {
             "name": "Python Console App",
             "type": "python",
             "request": "launch",
