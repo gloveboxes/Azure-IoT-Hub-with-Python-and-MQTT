@@ -1,0 +1,3 @@
+{
+    "ConnectionString":"HostName=IoTCampAU.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=iVfr5GSIUcCBQu0JTOD98TAP0gmORQsLSXe0TPmaNEw="
+}
