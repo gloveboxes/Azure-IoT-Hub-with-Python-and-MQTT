@@ -1,3 +1,6 @@
+# https://azure.microsoft.com/en-us/documentation/samples/iot-hub-python-get-started/
+#This sample extended from the deviceManager.py sample
+
 """
 Module Name:  deviceManager.py
 Project:      IoTHubRestSample
