@@ -23,45 +23,47 @@ import urllib
 import json
 import sys
 
-def addDevice():
+def newDevice():
     data = dm.createDeviceId(deviceId)
-    o = json.loads(data[0])
-    print('New Device Created')
-    print('Device Id: {0}'.format(o['deviceId']))
-    print(o['authentication']['symmetricKey'])
+    parsed = json.loads(data[0])
+    print(json.dumps(parsed, indent=4, sort_keys=True))
 
 def deleteDevice():
-    data = dm.deleteDeviceId(deviceId)
-    print(data)
+    print('Confirm deletion of device {0}. y/n'.format(deviceId))
+    response = input()
+    if response.lower() == 'y':
+        data = dm.deleteDeviceId(deviceId)
+        print(data)
 
-def getDeviceKey():
+def getDeviceInfo():
     data = dm.retrieveDeviceId(deviceId)
-    o = json.loads(data[0])
-    print(o)
-    print(o['authentication']['symmetricKey'])
+    parsed = json.loads(data[0])
+    print(json.dumps(parsed, indent=4, sort_keys=True))
 
 def listDevices():
     data = dm.listDeviceIds()
-    o = json.loads(data[0])
-    for i in range(0, len(o)):
-        print("Device: {0}, Keys: Primary {1} Secondary {2}".format(o[i]['deviceId'], o[i]['authentication']['symmetricKey']['primaryKey'], o[i]['authentication']['symmetricKey']['secondaryKey']))
+    o = json.loads(data[0])  
+    for row in sorted(o,key=lambda x:x['deviceId'].lower()):
+        #print("{0}   {1}".format(row['deviceId'], row['authentication']['symmetricKey']))
+        print(row['deviceId'])
+
 
 def help():
     print('Valid Comamnds.')
     print()
-    print('Add a New Devce: add deviceId')
-    print('Get Device Key: key deviceId')
-    print('List add Devices: list')
-    print('Delete a device: delete deviceid')
+    print('New Device: new deviceId')
+    print('Device Information: info deviceId')
+    print('List Devices: list')
+    print('Delete Device: delete deviceid')
 
 
-options = {'add' : addDevice, 'key': getDeviceKey, 'list': listDevices, 'delete':deleteDevice, 'help':help }
+options = {'new' : newDevice, 'info': getDeviceInfo, 'list': listDevices, 'delete':deleteDevice, 'help':help }
 
 
 def config_load():
     try:
         ConfigFile = 'config.json'
-        print('Loading {0} settings'.format(ConfigFile))
+        #print('Loading {0} settings'.format(ConfigFile))
         config_data = open(ConfigFile)
         config = json.load(config_data)
         return config['ConnectionString']
@@ -138,14 +140,19 @@ if __name__ == '__main__':
         else:
             deviceId = 'None Specified'
 
-        print()
-        print("command: {0}".format(cmd))
-        print("Device: {0}".format(deviceId))
-        print()
+        #print()
+        #print("command: {0}".format(cmd))
+        #print("Device: {0}".format(deviceId))
+        #print()
         connectionString = config_load()
-        print()
+        #print()
 
         dm = DeviceManager(connectionString)
 
-        options[cmd]()
+        try:
+            options[cmd]()
+        except:
+            print('Invalid startup command')
+            print()
+            help()
 
