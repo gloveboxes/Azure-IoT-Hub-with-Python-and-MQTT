@@ -99,7 +99,7 @@ The sample includes the Baltimore Cybertrust Key exported as baltimorebase64.cer
 
 1. To find your Raspberry Pi on your network by name install [Apple Print Bonjour Service](https://support.apple.com/kb/dl999?locale=en_AU) on Windows for mDNS UNIX Name Resolution. .
 2. My favourite SSH and SFTP Windows Client is [Bitvise](https://www.bitvise.com/)
-3. [Visual Studio Code](https://code.visualstudio.com/) for Windows, Mac and Linux
+3. [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=iot-0000-dglover) for Windows, Mac and Linux
 
 
 # Tips and Tricks
